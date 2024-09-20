@@ -5,7 +5,7 @@
 
 ContentSmith AI is an intelligent content generation and social media analytics system built with **Retrieval-Augmented Generation (RAG)**. It transforms social media profile analytics from CSV files into valuable insights, enabling users to automate content creation and understand engagement trends with precision.
 
-This project uses **Cohere's language models** for chat interaction and embeddings, along with **Pinecone** as the vector database for efficient vector search and retrieval. The project has been compiled in a Langflow JSON file (`ContentSmith AI.json`) for easy deployment and customization within your own Langflow instance.
+This project uses **OpenAI's language models** for chat interaction and embeddings, along with **Pinecone** as the vector database for efficient vector search and retrieval. The project has been compiled in a Langflow JSON file (`ContentSmith AI.json`) for easy deployment and customization within your own Langflow instance.
 
 ## Project Overview
 
@@ -23,7 +23,7 @@ ContentSmith AI automates social media content analysis by enabling users to ask
 
 ### Technologies Used
 
-- **Cohere Language Model**: Handles chat interaction and advanced prompting for content generation.
+- **OpenAI Language Model**: Handles chat interaction and advanced prompting for content generation.
 - **Cohere Embedding Model (`embed-english-v2.0`)**: Converts textual data from the CSV into vector embeddings for semantic search and retrieval.
 - **Pinecone Vector Database**: Stores embeddings and facilitates efficient vector-based search.
 
@@ -39,6 +39,7 @@ ContentSmith AI automates social media content analysis by enabling users to ask
 To configure the project in your Langflow instance, create the following **Global Variables** in Langflow for the system to work properly:
 
 - `COHERE_API_KEY`: Your API key from Cohere.
+- `OPENAI_API_KEY`: Your API key from OpenAI
 - `PINECONE_INDEX_NAME`: The name of your Pinecone index.
 - `PINECONE_API_KEY`: Your Pinecone API key.
 
@@ -56,7 +57,7 @@ ContentSmith AI begins by extracting relevant columns from the uploaded CSV file
 After extracting and cleaning the text (removing unnecessary characters and structuring the content), the system uses the **Cohere Embedding Model (`embed-english-v2.0`)** to convert this data into vector embeddings. These embeddings are stored in the **Pinecone Vector Database**, which allows for efficient semantic search and retrieval.
 
 ### 3. **Retrieval-Augmented Generation (RAG)**
-When users ask a question, ContentSmith AI retrieves the most relevant embeddings from Pinecone, and the Cohere model generates a response by referencing this context. Advanced prompting techniques ensure that the model pulls exact quotes, verifies claims, and expresses uncertainty if the relevant information isn’t available.
+When users ask a question, ContentSmith AI retrieves the most relevant embeddings from Pinecone, and the OpenAI model generates a response by referencing this context. Advanced prompting techniques ensure that the model pulls exact quotes, verifies claims, and expresses uncertainty if the relevant information isn’t available.
 
 ### 4. **User Interaction (Example Queries)**
 Here are a few example queries users can ask:
@@ -77,7 +78,7 @@ To ensure accuracy and reliability, ContentSmith AI uses advanced prompting tech
 ## Deployment
 
 ### Live on Hugging Face
-You can access a live version of the project on [Hugging Face Spaces](https://huggingface.co/spaces/DonGuillotine/LangflowProj).
+You can access a live version of the project on [Railway](https://langflowailangflowlatest-production-9896.up.railway.app/).
 
 ## Conclusion
 
