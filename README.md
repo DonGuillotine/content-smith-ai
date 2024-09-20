@@ -9,7 +9,7 @@ This project uses **OpenAI's language models** for chat interaction and embeddin
 
 ## Project Overview
 
-**Live Demo**: [ContentSmith AI on Hugging Face Spaces](https://huggingface.co/spaces/DonGuillotine/LangflowProj)
+**Live Demo**: [Railway](https://huggingface.co/spaces/DonGuillotine/LangflowProj)
 
 ContentSmith AI automates social media content analysis by enabling users to ask specific questions about their TikTok performance data, such as identifying posts with high engagement, summarizing popular posts, and understanding engagement trends over time. The system is designed to provide accurate and reliable insights by reducing hallucinations, pulling exact quotes from data, and ensuring grounded, factual responses.
 
